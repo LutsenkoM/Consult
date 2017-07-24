@@ -1,0 +1,97 @@
+.site-footer {
+  background-color: $footer-color;
+  .foot-up {
+    padding: 4rem 0;
+  }
+  .foot-title {
+    font-family: $Montserrat;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    color: $white;
+  }
+  .navbar-foot {
+    font-family: $Montserrat;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    li {
+      margin-bottom: 0.5rem;
+      a {
+        @include transition;
+        color: $gray-custom;
+        &:hover {
+          color: $contact-block-color;
+        }
+      }
+    }
+  }
+  .news-letter-text {
+    font-family: $Domine;
+    font-size: 1rem;
+    color: $gray-custom;
+  }
+  .email-field {
+    width: 80%;
+    position: absolute;
+    padding: 0.5rem 20px;
+    text-transform: uppercase;
+    font-family: $Montserrat;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: none;
+    background: #323334;
+    color: $contact-block-color;
+  }
+  .email-button {
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    font-family: $Montserrat;
+    color: $white;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+  }
+  .foot-down {
+    padding: 2rem 0;
+    border-top: 1px solid $footer-line-color;
+    .copyright {
+      font-family: $Domine;
+      font-size: 1rem;
+      color: $gray-custom;
+    }
+    .social-icon {
+      font-family: $Montserrat;
+      font-size: 0.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-right: 20px;
+      a {
+        @include transition;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+    .facebook-color a {
+      color: $facebook-color;
+    }
+    .twitter-color a {
+      color: $twitter-color;
+    }
+    .instagram-color a {
+      color: $instagram-color;
+    }
+    .linked-color a {
+      color: $linkedin-color;
+    }
+    .gplus-color a {
+      color: $gplus-color;
+    }
+  }
+
+}

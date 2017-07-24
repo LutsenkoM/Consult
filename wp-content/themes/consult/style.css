@@ -1,11 +1,10 @@
 /*
-Theme Name: Psychics11
+Theme Name: Consult
 Theme URI: https://
 Author: Lutsenko Max
 Description: This is testing task for eKreative
 Version: 1.0
 */
-/* line 5, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,58 +26,467 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
 }
 
 @font-face {
-  font-family: "Roboto Regular";
-  src: url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  src: url("./fonts/Montserrat/Montserrat-Regular.otf") format("opentype");
+  src: url("./fonts/Montserrat/Montserrat-Regular.woff") format("woff");
+  src: url("./fonts/Montserrat/Montserrat-Regular.eot") format("eot");
 }
 @font-face {
-  font-family: "Halant Regular";
-  src: url("./fonts/Halant/Halant-Regular.ttf") format("truetype");
+  font-family: "Domine";
+  src: url("./fonts/Domine/Domine-Regular.ttf") format("truetype");
+  src: url("./fonts/Domine/Domine-Regular.otf") format("opentype");
+  src: url("./fonts/Domine/Domine-Regular.woff") format("woff");
+  src: url("./fonts/Domine/Domine-Regular.eot") format("eot");
 }
-@font-face {
-  font-family: "Halant Medium";
-  src: url("./fonts/Halant/Halant-Medium.ttf") format("truetype");
+a {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none !important;
+}
+
+.intro {
+  background-color: #000;
+}
+
+.site-header {
+  margin-bottom: 10rem;
+}
+
+#header-menu li {
+  display: inline-block;
+}
+
+#button-menu {
+  display: none;
+  background-color: transparent;
+  background: none;
+  border: 1px solid transparent;
+  outline: none;
+  font-size: 1.25rem;
+}
+#button-menu:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.navbar-nav li {
+  margin: 0 2rem;
+}
+.navbar-nav li a {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 0.875rem;
+  font-weight: bold;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.navbar-nav li a:hover {
+  color: #f6961b;
+}
+
+.choose .intro-subtitle, .choose .intro-title {
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+}
+.choose .intro-subtitle {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+.choose .intro-title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.choose-industry-slider .industry-link {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  display: block;
+  height: 17.5rem;
+  text-decoration: none;
+  background-color: #03b6e7;
+  margin: 0 15px;
+}
+.choose-industry-slider .industry-link:hover {
+  background-color: #f6961b;
+}
+.choose-industry-slider .industry-link .industry-icon {
+  height: 60px;
+  margin-bottom: 20px;
+}
+.choose-industry-slider .industry-link .industry-title {
+  font-size: 1.2rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  letter-spacing: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+.choose-industry-slider .slick-dots {
+  position: static;
+  padding-bottom: 3.5rem;
+}
+.choose-industry-slider .slick-list {
+  margin-bottom: 5rem;
+}
+.choose-industry-slider .slick-dots li.slick-active button:before {
+  content: url(img/dot-active.png);
+}
+.choose-industry-slider .slick-dots li button:before {
+  content: url(img/dot.png);
+  opacity: 1;
+}
+
+.about {
+  text-align: center;
+}
+
+.title-section {
+  padding-top: 6rem;
+  margin-bottom: 2.5rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.about-text {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #838b8c;
+}
+
+.button-to-page {
+  display: inline-block;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-bottom: 4rem;
+}
+
+.green {
+  background-color: #16d428;
+}
+.green:hover {
+  background-color: #1bb52a;
+  color: #fff;
+}
+
+.clients-logo-slider {
+  padding-top: 3rem;
+  margin-bottom: 3rem;
+  border-top: 1px solid #e7eff1;
+}
+.clients-logo-slider .slick-prev:before {
+  content: url(img/arrow-left-active.png);
+}
+.clients-logo-slider .slick-next:before {
+  content: url(img/arrow-right-active.png);
+}
+.clients-logo-slider .slick-prev, .clients-logo-slider .slick-next {
+  transform: none;
+}
+
+.client-logo {
+  display: block;
+}
+
+.features {
+  text-align: center;
+  background-color: #e7eff1;
+}
+
+.margin-bottom {
+  margin-bottom: 3rem;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.padding-left {
+  padding-left: 25px;
+}
+
+.padding-right {
+  padding-right: 25px;
+}
+
+.img-feature {
+  max-width: 100%;
+  height: 50%;
+}
+
+.feature-title {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.feature-text {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 0.9rem;
+  color: #838b8c;
+}
+
+.contact-block {
+  padding: 1rem 2rem;
+  background-color: #565d5d;
+}
+.contact-block .contact-title {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1.2rem;
+  color: #fff;
+  vertical-align: middle;
+  line-height: 40px;
+  margin-bottom: 0;
+}
+.contact-block .contact-button {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  border: none;
+  border-radius: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.services {
+  text-align: center;
+  background-color: #fffaf3;
+}
+.services .service-icon, .services .service-title, .services .service-text {
+  text-align: left;
+}
+.services .service-icon {
+  margin-bottom: 1.5rem;
+}
+.services .service-title {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+.services .service-text {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #838b8c;
+}
+
+.quick-contacts {
+  text-align: center;
+}
+.quick-contacts .contact-card {
+  border: 1px solid #e1eaec;
+  padding: 2rem 0.5rem;
+  height: 100%;
+}
+.quick-contacts .quick-icon {
+  padding-right: 2rem;
+}
+.quick-contacts .quick-title {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.quick-contacts .quick-contact {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.site-footer {
+  background-color: #262829;
+}
+.site-footer .foot-up {
+  padding: 4rem 0;
+}
+.site-footer .foot-title {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+.site-footer .navbar-foot {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.site-footer .navbar-foot li {
+  margin-bottom: 0.5rem;
+}
+.site-footer .navbar-foot li a {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  color: #838b8c;
+}
+.site-footer .navbar-foot li a:hover {
+  color: #565d5d;
+}
+.site-footer .news-letter-text {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1rem;
+  color: #838b8c;
+}
+.site-footer .email-field {
+  width: 80%;
+  position: absolute;
+  padding: 0.5rem 20px;
+  text-transform: uppercase;
+  font-family: "Montserrat", Arial, sans-serif;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border: none;
+  background: #323334;
+  color: #565d5d;
+}
+.site-footer .email-button {
+  border: none;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+.site-footer .foot-down {
+  padding: 2rem 0;
+  border-top: 1px solid #323334;
+}
+.site-footer .foot-down .copyright {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1rem;
+  color: #838b8c;
+}
+.site-footer .foot-down .social-icon {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+.site-footer .foot-down .social-icon a {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.site-footer .foot-down .social-icon a:hover {
+  color: #fff;
+}
+.site-footer .foot-down .facebook-color a {
+  color: #334f84;
+}
+.site-footer .foot-down .twitter-color a {
+  color: #00b5da;
+}
+.site-footer .foot-down .instagram-color a {
+  color: #d4c5a8;
+}
+.site-footer .foot-down .linked-color a {
+  color: #1c6b94;
+}
+.site-footer .foot-down .gplus-color a {
+  color: #e4463b;
+}
+
+@media (max-width: 991px) {
+  #button-menu {
+    display: block !important;
+  }
+
+  .navbar-nav {
+    margin-top: 10px;
+  }
+  .navbar-nav li {
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+}
+@media (min-width: 992px) {
+  #button-menu {
+    display: none !important;
+  }
 }

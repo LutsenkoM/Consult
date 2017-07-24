@@ -1,14 +1,15 @@
 @font-face {
-  font-family: "Roboto Regular";
-  src: url("./fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-family: "Montserrat";
+  src: url("./fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  src: url("./fonts/Montserrat/Montserrat-Regular.otf") format("opentype");
+  src: url("./fonts/Montserrat/Montserrat-Regular.woff") format("woff");
+  src: url("./fonts/Montserrat/Montserrat-Regular.eot") format("eot");
 }
 
 @font-face {
-  font-family: "Halant Regular";
-  src: url("./fonts/Halant/Halant-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Halant Medium";
-  src: url("./fonts/Halant/Halant-Medium.ttf") format("truetype");
+  font-family: "Domine";
+  src: url("./fonts/Domine/Domine-Regular.ttf") format("truetype");
+  src: url("./fonts/Domine/Domine-Regular.otf") format("opentype");
+  src: url("./fonts/Domine/Domine-Regular.woff") format("woff");
+  src: url("./fonts/Domine/Domine-Regular.eot") format("eot");
 }

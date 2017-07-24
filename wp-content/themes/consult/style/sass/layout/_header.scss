@@ -1,0 +1,45 @@
+a {
+  @include transition;
+  text-decoration: none !important;
+}
+
+.intro {
+  background-color: #000;
+}
+.site-header {
+  margin-bottom: 10rem;
+}
+#header-menu {
+  li {
+    display: inline-block;
+  }
+}
+
+#button-menu {
+  display: none;
+  background-color: transparent;
+  background: none;
+  border: 1px solid transparent;
+  outline: none;
+  font-size: 1.25rem;
+  &:hover {
+    color: blue;
+    cursor: pointer;
+  }
+}
+
+.navbar-nav li{
+  margin: 0 2rem;
+  a {
+    @include transition;
+    font-size: 0.875rem;
+    font-weight: bold;
+    font-family: $Montserrat;
+    color: $white;
+    text-transform: uppercase;
+    text-decoration: none;
+    &:hover {
+      color: #f6961b;
+    }
+  }
+}

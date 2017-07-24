@@ -42,10 +42,18 @@ function consult_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'menu-1' => esc_html__( 'Primary', 'consult' ),
-	) );
+    //MENU
+    register_nav_menus(
+        array(
+            'navigation' => __( 'Navigation Menu' ),
+            'industry' => __( 'Industry Menu' ),
+        )
+    );
+    //MENU-END
+
+    //Load logo
+    add_theme_support( 'custom-logo' );
+    //Load logo end
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -113,6 +121,83 @@ function consult_widgets_init() {
 }
 add_action( 'widgets_init', 'consult_widgets_init' );
 
+//REGISTERED POST TYPES
+function post_types_init() {
+
+    //Choose industry posts
+    $choose_industry = array(
+        'label' => 'Choose industry slider',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'choose-industry'),
+        'query_var' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes',)
+    );
+    register_post_type('choose-industry', $choose_industry);
+    //Choose industry posts end
+
+    //Clients logo posts
+    $clients_logos = array(
+        'label' => 'Clients logos slider',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'clients-logos'),
+        'query_var' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes',)
+    );
+    register_post_type('clients-logos', $clients_logos);
+    //Clients logo posts end
+
+    //Services posts
+    $services = array(
+        'label' => 'Services',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'services'),
+        'query_var' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes',)
+    );
+    register_post_type('services', $services);
+    //Services posts end
+}
+add_action('init', 'post_types_init');
+
 /**
  * Enqueue scripts and styles.
  */
@@ -123,10 +208,14 @@ function consult_scripts() {
     wp_enqueue_style('bootstrap-grid.css', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap-grid.css');
     wp_enqueue_style('bootstrap-reboot.css', get_template_directory_uri() . '/node_modules/bootstrap/dist/css/bootstrap-reboot.css');
     wp_enqueue_style('font-awesome.css', get_template_directory_uri() . '/node_modules/font-awesome/css/font-awesome.css');
+    wp_enqueue_style('slick.css', get_template_directory_uri() . '/node_modules/slick-carousel/slick/slick.css');
+    wp_enqueue_style('slick-theme.css', get_template_directory_uri() . '/node_modules/slick-carousel/slick/slick-theme.css');
 
     wp_enqueue_script('jquery.js', get_template_directory_uri() . '/node_modules/jquery/dist/jquery.js');
+    wp_enqueue_script('jquery-migrate.js', get_template_directory_uri() . '/node_modules/jquery-migrate/dist/jquery-migrate.min.js');
     wp_enqueue_script('tether.js', get_template_directory_uri() . '/node_modules/tether/dist/js/tether.js');
     wp_enqueue_script('bootstrap.js', get_template_directory_uri() . '/node_modules/bootstrap/dist/js/bootstrap.js');
+    wp_enqueue_script('slick.js', get_template_directory_uri() . '/node_modules/slick-carousel/slick/slick.js');
     wp_enqueue_script('custom.js', get_template_directory_uri() . '/js/custom.js');
 
 	wp_enqueue_script( 'consult-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
