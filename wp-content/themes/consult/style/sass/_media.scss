@@ -9,15 +9,43 @@
 // MAX-WIDTH: 992px
 //**********************************
 @media (max-width: 991px) {
+  html {
+    font-size: 14px;
+  }
   #button-menu {
     display: block !important;
   }
-
   .navbar-nav {
     margin-top: 10px;
     li {
       text-align: center;
       margin: 0 0 20px 0;
+    }
+  }
+  .contact-card-wrapp {
+    margin-bottom: 1rem;
+  }
+  .contact-block {
+    flex-direction: column;
+    .contact-button {
+      padding: 1rem 2rem;
+    }
+  }
+  .text-align-md-center {
+    text-align: center;
+  }
+  .margin-md-bottom {
+    margin-bottom: 2rem;
+  }
+  .project-img {
+    img {
+      width: 100%;
+    }
+  }
+  .blog .blog-post {
+    margin-bottom: 1rem;
+    article {
+      flex-direction: column;
     }
   }
 }
@@ -33,13 +61,28 @@
 // MAX-WIDTH: 768px
 //**********************************
 @media (max-width: 768px) {
-
-
+  .services .service-icon, .services .service-title, .services .service-text {
+    text-align: center;
+  }
+  .testimonials .client-testimonial:after {
+    bottom: -32px;
+    left: 85%;
+  }
 }
 //**********************************
 // MAX-WIDTH: 576px
 //**********************************
 @media (max-width: 576px) {
-
-
+  html {
+    font-size: 12px;
+  }
+  .site-header {
+    flex-direction: column;
+    .logo-wrapp, .navbar, .contacts {
+      margin-bottom: 1rem;
+    }
+  }
+  .blog {
+    padding: 0 20px;
+  }
 }

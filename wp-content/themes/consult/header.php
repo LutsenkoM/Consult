@@ -14,7 +14,7 @@
 <html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, IE=9; IE=8; IE=7; IE=EDGE"  http-equiv="X-UA-Compatible" >
 	<link rel="profile" href="http://gmpg.org/xfn/11">
     <style type="text/css" id="custom-background-css">
         .intro { background: url("<?php echo get_theme_mod('bg-intro'); ?>") no-repeat center; background-size: cover; }
@@ -27,7 +27,7 @@
 
     <section class="intro">
         <header id="masthead" class="site-header d-flex justify-content-between container">
-            <div class="logo-wrapp ">
+            <div class="logo-wrapp d-flex justify-content-center">
                 <?php the_custom_logo(); ?>
             </div>
             <nav class="navbar navbar-toggleable-md navbar-light">
@@ -40,9 +40,9 @@
                     <?php wp_nav_menu( array( 'theme_location' => 'navigation', 'menu_id' => 'header-menu', 'menu_class' => 'navbar-nav', 'container' => 'ul'  ) ); ?>
                 </div>
             </nav>
-            <div class="contacts">
-                <i class="fa fa-phone" aria-hidden="true"><?php echo get_theme_mod('hot-line') ?></i>
-                <a href="mailto:lutsenko.maxim@gmail.com">e-mail</a>
+            <div class="contacts d-flex justify-content-center">
+                <p class="phone-header"><i class="fa fa-phone fa-lg" aria-hidden="true"></i><?php echo get_theme_mod('hot-line') ?></p>
+                <a href="mailto:lutsenko.maxim@gmail.com" class="email-header-btn"><i class="fa fa-envelope-open-o" aria-hidden="true"></i></a>
             </div>
         </header><!-- #masthead -->
         <div class="choose container">

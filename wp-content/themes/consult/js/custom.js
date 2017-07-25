@@ -18,6 +18,13 @@ $( document ).ready(function() {
                 }
             },
             {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
@@ -63,17 +70,35 @@ $( document ).ready(function() {
                 breakpoint: 600,
                 settings: {
                     slidesToShow: 2,
-                    slidesToScroll: 2
+                    slidesToScroll: 2,
+                    arrows: false,
+                    autoplay: true
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    arrows: false,
+                    autoplay: true
+
                 }
             }
         ]
     });
     //Clients logos slider end
+    //Testimonial slider
+    $('.testimonials-slider').slick({
+        arrows: false,
+        autoplay: true
+    });
+    //Testimonial slider end
+    //Projects slider
+    $('.project-img-slider').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true
+    });
+    //Projects slider end
 });

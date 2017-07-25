@@ -66,14 +66,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   src: url("./fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
   src: url("./fonts/Montserrat/Montserrat-Regular.otf") format("opentype");
   src: url("./fonts/Montserrat/Montserrat-Regular.woff") format("woff");
-  src: url("./fonts/Montserrat/Montserrat-Regular.eot") format("eot");
 }
 @font-face {
   font-family: "Domine";
   src: url("./fonts/Domine/Domine-Regular.ttf") format("truetype");
   src: url("./fonts/Domine/Domine-Regular.otf") format("opentype");
   src: url("./fonts/Domine/Domine-Regular.woff") format("woff");
-  src: url("./fonts/Domine/Domine-Regular.eot") format("eot");
 }
 a {
   -webkit-transition: 0.5s;
@@ -84,12 +82,17 @@ a {
   text-decoration: none !important;
 }
 
+.bg-header {
+  background-color: lightslategray;
+}
+
 .intro {
   background-color: #000;
 }
 
 .site-header {
   margin-bottom: 10rem;
+  padding: 2rem 0;
 }
 
 #header-menu li {
@@ -103,14 +106,15 @@ a {
   border: 1px solid transparent;
   outline: none;
   font-size: 1.25rem;
+  color: #fff;
 }
 #button-menu:hover {
-  color: blue;
+  color: #f6961b;
   cursor: pointer;
 }
 
 .navbar-nav li {
-  margin: 0 2rem;
+  margin: 0 10px;
 }
 .navbar-nav li a {
   -webkit-transition: 0.5s;
@@ -127,6 +131,34 @@ a {
 }
 .navbar-nav li a:hover {
   color: #f6961b;
+}
+
+.email-header-btn {
+  display: block;
+  width: 33px;
+  height: 33px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  background-color: #03b6e7;
+}
+.email-header-btn:hover {
+  color: #fff;
+  background-color: #f6961b;
+}
+
+.contacts .phone-header {
+  margin-right: 10px;
+  margin-bottom: 0;
+  color: #fff;
+  line-height: 33px;
+}
+.contacts .phone-header .fa-phone {
+  color: #1c6b94;
+  margin-right: 5px;
 }
 
 .choose .intro-subtitle, .choose .intro-title {
@@ -266,12 +298,12 @@ a {
   text-align: left;
 }
 
-.padding-left {
-  padding-left: 25px;
+.margin-left {
+  margin-left: 25px;
 }
 
-.padding-right {
-  padding-right: 25px;
+.margin-right {
+  margin-right: 25px;
 }
 
 .img-feature {
@@ -321,6 +353,90 @@ a {
   color: #fff;
 }
 
+.projects {
+  text-align: center;
+}
+
+.projects-post {
+  margin-bottom: 4rem;
+}
+
+.project-post-link .project-info {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding: 1.5rem;
+  text-align: left;
+  height: 12rem;
+}
+.project-post-link .project-info h3 {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  color: #000;
+}
+.project-post-link .project-info p {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #838b8c;
+}
+.project-post-link:hover .project-info {
+  background-color: #f6961b;
+}
+.project-post-link:hover .project-info h3 {
+  color: #fff;
+}
+.project-post-link:hover .project-info p {
+  color: #fff;
+}
+
+.projects-post {
+  border: 1px solid #e1eaec;
+}
+.projects-post .project-img {
+  position: relative;
+  height: 18rem;
+  overflow: hidden;
+  text-align: center;
+}
+.projects-post .project-img .slick-dots {
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  display: block;
+  width: inherit;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+.projects-post .project-img .category-project {
+  position: absolute;
+  top: 0.8rem;
+  left: 0.8rem;
+  z-index: 1;
+  border: 2px solid #f6961b;
+  border-radius: 20px;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.31rem 0.625rem;
+}
+.projects-post .project-img .project-img-slider .slick-dots li.slick-active button:before {
+  content: url(img/dot-active.png);
+}
+.projects-post .project-img .project-img-slider .slick-dots li button:before {
+  content: url(img/dot.png);
+  opacity: 1;
+}
+
 .services {
   text-align: center;
   background-color: #fffaf3;
@@ -345,6 +461,119 @@ a {
   color: #838b8c;
 }
 
+.testimonials {
+  position: relative;
+  text-align: center;
+  background-color: #03b6e7;
+  padding-bottom: 2rem;
+}
+.testimonials:before {
+  position: absolute;
+  width: 166px;
+  height: 131px;
+  left: 10%;
+  content: "";
+  background: url("img/quote.png");
+}
+.testimonials .title-section {
+  color: #fff;
+}
+.testimonials .client-photo {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 30px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+}
+.testimonials .client-testimonial {
+  position: relative;
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1rem;
+  color: #e7eff1;
+  margin-bottom: 40px;
+}
+.testimonials .client-testimonial:after {
+  position: absolute;
+  width: 30px;
+  height: 21px;
+  bottom: -15px;
+  left: 94%;
+  content: "";
+  background: url("img/quote-white.png");
+}
+.testimonials .client-name {
+  position: relative;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+}
+.testimonials .client-name:before {
+  position: absolute;
+  width: 25px;
+  height: 1px;
+  left: 48%;
+  top: -17px;
+  border: 1px solid #fff;
+  content: "";
+  color: #fff;
+}
+.testimonials .designation {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1rem;
+  color: #e7eff1;
+  margin-bottom: 40px;
+}
+
+.blog {
+  text-align: center;
+  background-color: #e7eff1;
+}
+.blog .posts-container {
+  margin-bottom: 4rem;
+}
+.blog .blog-post {
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  padding: 0;
+  border-top: 2px solid #f6961b;
+  background-color: #fff;
+}
+.blog .blog-post:hover {
+  border-top: 2px solid #16d428;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.blog .blog-post .post-info {
+  padding: 20px;
+}
+.blog .blog-post .post-info li {
+  text-align: left;
+}
+.blog .blog-post .post-info .post-date {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+.blog .blog-post .post-info .post-title {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  color: #000;
+}
+.blog .blog-post .post-info .post-excerpt {
+  font-family: "Domine", Arial, sans-serif;
+  font-size: 1rem;
+  color: #838b8c;
+}
+
 .quick-contacts {
   text-align: center;
 }
@@ -354,7 +583,7 @@ a {
   height: 100%;
 }
 .quick-contacts .quick-icon {
-  padding-right: 2rem;
+  padding-right: 1rem;
 }
 .quick-contacts .quick-title {
   font-family: "Montserrat", Arial, sans-serif;
@@ -408,7 +637,7 @@ a {
   color: #838b8c;
 }
 .site-footer .email-field {
-  width: 80%;
+  width: 90%;
   position: absolute;
   padding: 0.5rem 20px;
   text-transform: uppercase;
@@ -473,6 +702,10 @@ a {
 }
 
 @media (max-width: 991px) {
+  html {
+    font-size: 14px;
+  }
+
   #button-menu {
     display: block !important;
   }
@@ -484,9 +717,65 @@ a {
     text-align: center;
     margin: 0 0 20px 0;
   }
+
+  .contact-card-wrapp {
+    margin-bottom: 1rem;
+  }
+
+  .contact-block {
+    flex-direction: column;
+  }
+  .contact-block .contact-button {
+    padding: 1rem 2rem;
+  }
+
+  .text-align-md-center {
+    text-align: center;
+  }
+
+  .margin-md-bottom {
+    margin-bottom: 2rem;
+  }
+
+  .project-img img {
+    width: 100%;
+  }
+
+  .blog .blog-post {
+    margin-bottom: 1rem;
+  }
+  .blog .blog-post article {
+    flex-direction: column;
+  }
 }
 @media (min-width: 992px) {
   #button-menu {
     display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .services .service-icon, .services .service-title, .services .service-text {
+    text-align: center;
+  }
+
+  .testimonials .client-testimonial:after {
+    bottom: -32px;
+    left: 85%;
+  }
+}
+@media (max-width: 576px) {
+  html {
+    font-size: 12px;
+  }
+
+  .site-header {
+    flex-direction: column;
+  }
+  .site-header .logo-wrapp, .site-header .navbar, .site-header .contacts {
+    margin-bottom: 1rem;
+  }
+
+  .blog {
+    padding: 0 20px;
   }
 }

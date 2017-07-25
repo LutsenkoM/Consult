@@ -2,19 +2,21 @@ a {
   @include transition;
   text-decoration: none !important;
 }
-
+.bg-header {
+  background-color: lightslategray;
+}
 .intro {
   background-color: #000;
 }
 .site-header {
   margin-bottom: 10rem;
+  padding: 2rem 0;
 }
 #header-menu {
   li {
     display: inline-block;
   }
 }
-
 #button-menu {
   display: none;
   background-color: transparent;
@@ -22,14 +24,14 @@ a {
   border: 1px solid transparent;
   outline: none;
   font-size: 1.25rem;
+  color: $white;
   &:hover {
-    color: blue;
+    color: $brown-custom;
     cursor: pointer;
   }
 }
-
 .navbar-nav li{
-  margin: 0 2rem;
+  margin: 0 10px;
   a {
     @include transition;
     font-size: 0.875rem;
@@ -42,4 +44,33 @@ a {
       color: #f6961b;
     }
   }
+}
+.email-header-btn {
+  display: block;
+  width: 33px;
+  height: 33px;
+  line-height: 30px;
+  vertical-align: middle;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  color: $white;
+  background-color: #03b6e7;
+  &:hover {
+    color: $white;
+    background-color: $brown-custom;
+  }
+}
+.contacts {
+  .phone-header {
+    margin-right: 10px;
+    margin-bottom: 0;
+    color: $white;
+    line-height: 33px;
+    .fa-phone {
+      color: $linkedin-color;
+      margin-right: 5px;
+    }
+  }
+
 }

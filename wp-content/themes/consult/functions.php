@@ -195,6 +195,29 @@ function post_types_init() {
     );
     register_post_type('services', $services);
     //Services posts end
+    //Testimonials
+    $testimonials = array(
+        'label' => 'Testimonials slider',
+        'public' => true,
+        'show_ui' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'rewrite' => array('slug' => 'testimonials'),
+        'query_var' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'trackbacks',
+            'custom-fields',
+            'comments',
+            'revisions',
+            'thumbnail',
+            'author',
+            'page-attributes',)
+    );
+    register_post_type('testimonials', $testimonials);
+    //Testimonials end
 }
 add_action('init', 'post_types_init');
 
@@ -231,7 +254,7 @@ add_action( 'wp_enqueue_scripts', 'consult_scripts' );
 /**
  * Implement the Custom Header feature.
  */
-require get_template_directory() . '/inc/custom-header.php';
+//require get_template_directory() . '/inc/custom-header-custom.php';
 
 /**
  * Custom template tags for this theme.

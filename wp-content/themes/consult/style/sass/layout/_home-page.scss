@@ -17,7 +17,6 @@
     margin-bottom: 3rem;
   }
 }
-
 .choose-industry-slider {
   .industry-link {
     @include transition;
@@ -59,6 +58,7 @@
   }
 }
 //Intro section end
+
 //About section
   .about {
     text-align: center;
@@ -110,12 +110,11 @@
       transform: none;
     }
   }
-
   .client-logo {
     display: block;
   }
-
 //About section end
+
 //Features section
   .features {
     text-align: center;
@@ -130,11 +129,11 @@
   .text-left {
     text-align: left;
   }
-  .padding-left {
-    padding-left: 25px;
+  .margin-left {
+    margin-left: 25px;
   }
-  .padding-right {
-    padding-right: 25px;
+  .margin-right {
+    margin-right: 25px;
   }
   .img-feature {
     max-width: 100%;
@@ -177,6 +176,90 @@
     }
   }
 //Features section end
+
+//Projects section
+  .projects {
+    text-align: center;
+  }
+  .projects-post {
+    margin-bottom: 4rem;
+  }
+  .project-post-link {
+    .project-info {
+      @include transition;
+      padding: 1.5rem;
+      text-align: left;
+      height: 12rem;
+      h3 {
+        font-family: $Montserrat;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 0.6rem;
+        color: $black;
+      }
+      p {
+        font-family: $Domine;
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: $gray-custom;
+      }
+    }
+    &:hover .project-info {
+      background-color: $brown-custom;
+      h3 {
+        color: $white;
+      }
+      p {
+        color: $white;
+      }
+    }
+  }
+  .projects-post {
+    border: 1px solid $border-contacts;
+    .project-img {
+      position: relative;
+      height: 18rem;
+      overflow: hidden;
+      text-align: center;
+      .slick-dots {
+        position: absolute;
+        bottom: 15px;
+        right: 25px;
+        display: block;
+        width: inherit;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+      }
+      .category-project {
+        position: absolute;
+        top: 0.8rem;
+        left: 0.8rem;
+        z-index: 1;
+        border: 2px solid $brown-custom;
+        border-radius: 20px;
+        font-family: $Montserrat;
+        font-size: 0.75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $white;
+        padding: 0.31rem 0.625rem;
+      }
+      .project-img-slider {
+        .slick-dots li.slick-active button:before {
+          content: url(img/dot-active.png);
+        }
+        .slick-dots li button:before {
+          content: url(img/dot.png);
+          opacity: 1;
+        }
+      }
+    }
+  }
+//Projects section end
+
 //Services
   .services {
     text-align: center;
@@ -202,6 +285,120 @@
     }
   }
 //Services end
+
+//Testimonials
+  .testimonials {
+    position: relative;
+    text-align: center;
+    background-color: $blue;
+    padding-bottom: 2rem;
+    &:before {
+      position: absolute;
+      width: 166px;
+      height: 131px;
+      left: 10%;
+      content: "";
+      background: url("img/quote.png") ;
+    }
+    .title-section {
+      color: $white;
+    }
+    .client-photo {
+      width: 70px;
+      height: 70px;
+      margin: 0 auto 30px auto;
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: $white;
+    }
+    .client-testimonial {
+      position: relative;
+      font-family: $Domine;
+      font-size: 1rem;
+      color: $features-blog-color;
+      margin-bottom: 40px;
+      &:after {
+        position: absolute;
+        width: 30px;
+        height: 21px;
+        bottom: -15px;
+        left: 94%;
+        content: "";
+        background: url("img/quote-white.png") ;
+      }
+    }
+    .client-name {
+      position: relative;
+      font-family: $Montserrat;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: $white;
+      &:before {
+        position: absolute;
+        width: 25px;
+        height: 1px;
+        left: 48%;
+        top: -17px;
+        border: 1px solid $white;
+        content: "";
+        color: $white;
+      }
+    }
+    .designation {
+      font-family: $Domine;
+      font-size: 1rem;
+      color: $features-blog-color;
+      margin-bottom: 40px;
+    }
+  }
+//Testimonials end
+
+// Our blog
+  .blog {
+    text-align: center;
+    background-color: $features-blog-color;
+    .posts-container {
+      margin-bottom: 4rem;
+    }
+    .blog-post {
+      @include transition;
+      padding: 0;
+      border-top: 2px solid $brown-custom;
+      background-color: $white;
+      &:hover {
+        border-top: 2px solid $green-button;
+        box-shadow: 0 0 30px rgba(0,0,0,0.5);
+      }
+      .post-info {
+        padding: 20px;
+        li {
+          text-align: left;
+        }
+        .post-date {
+          font-family: $Domine;
+          font-size: 1rem;
+          margin-bottom: 1rem;
+          color: $black;
+        }
+        .post-title {
+          font-family: $Montserrat;
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+          color: $black;
+        }
+        .post-excerpt {
+          font-family: $Domine;
+          font-size: 1rem;
+          color: $gray-custom;
+        }
+      }
+    }
+  }
+// Our blog end
+
 //Quick contact
   .quick-contacts {
     text-align: center;
@@ -211,7 +408,7 @@
       height: 100%;
     }
     .quick-icon {
-      padding-right: 2rem;
+      padding-right: 1rem;
     }
     .quick-title {
       font-family: $Montserrat;

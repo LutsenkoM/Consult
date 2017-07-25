@@ -488,6 +488,92 @@ function consult_customize_register( $wp_customize ) {
     );
 
     //Features section end
+    //Projects
+    $wp_customize->add_section ( 'projects',
+        array(
+            'title' => __('Projects section'),
+            'priority' => 10,
+            'panel' => 'Home page panel'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'projects_title',
+        array(
+            'default'			=> '',
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize, 'projects_title',
+            array(
+                'settings'		=> 'projects_title',
+                'section'		=> 'projects',
+                'type'			=> 'text',
+                'label'	        => __( 'Projects title' )
+            )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'projects_page',
+        array(
+            'sanitize_callback' => 'absint'
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,'projects_page',
+            array(
+                'settings'		=> 'projects_page',
+                'section'		=> 'projects',
+                'type'			=> 'dropdown-pages',
+                'label'			=> __( 'Select a "Projects" page' )
+            )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'project_img_1',
+        array(
+            'default'			=> ''
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'project_img_1',
+            array(
+                'settings'		=> 'project_img_1',
+                'section'		=> 'projects',
+                'label'			=> __( 'Upload img first post')
+            )
+        )
+    );
+
+    $wp_customize->add_setting(
+        'project_img_2',
+        array(
+            'default'			=> ''
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'project_img_2',
+            array(
+                'settings'		=> 'project_img_2',
+                'section'		=> 'projects',
+                'label'			=> __( 'Upload img first post')
+            )
+        )
+    );
+
+    //Projects end
     //Services
     $wp_customize->add_section ( 'services',
         array(
@@ -535,6 +621,34 @@ function consult_customize_register( $wp_customize ) {
         )
     );
     //Services end
+    //Testimonials
+    $wp_customize->add_section ( 'testimonials',
+        array(
+            'title' => __('Testimonials section'),
+            'priority' => 10,
+            'panel' => 'Home page panel'
+        )
+    );
+
+    $wp_customize->add_setting(
+        'testimonials_title',
+        array(
+            'default'			=> '',
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize, 'testimonials_title',
+            array(
+                'settings'		=> 'testimonials_title',
+                'section'		=> 'testimonials',
+                'type'			=> 'text',
+                'label'	        => __( 'Testimonials title' )
+            )
+        )
+    );
+    //Testimonials end
     //Our blog section
     $wp_customize->add_section ( 'our_blog',
         array(
