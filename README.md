@@ -5,5 +5,5 @@ Welcome to my repository! This is information for viewing my test work.
 2. Website  http://dev-consult-for-ekreative.pantheonsite.io/ 
 
 3. Wordpress:
-   3.1 Login: Admin
-   3.2 Password: Admin
+   Login: Admin
+   Password: Admin
